@@ -1,0 +1,6 @@
+framework module Pods_CoockS {
+  umbrella header "Pods-CoockS-umbrella.h"
+
+  export *
+  module * { export * }
+}
