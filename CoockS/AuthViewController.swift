@@ -15,13 +15,13 @@ class AuthViewController: UIViewController {
         willSet{
             if newValue{
                 titleLabel.text = "Регистрация"
-                emailField.isHidden = false
+                loginField.isHidden = false
                 enterButton.setTitle("Зарегистрироваться", for: .normal)
                 singButton.setTitle("войти", for: .normal)
                 
             } else {
                 titleLabel.text = "Вход"
-                emailField.isHidden = true
+                loginField.isHidden = true
                 enterButton.setTitle("Войти", for: .normal)
                 singButton.setTitle("Зарегистрироваться", for: .normal)
             }
@@ -107,7 +107,7 @@ class AuthViewController: UIViewController {
     
     func checkFieldsAndMakeLoginLogic() {
         
-        guard let login = loginField.text, !login.isEmpty  else {
+        guard let login = loginField.text, !login.isEmpty || loginField.isHidden == true  else {
             showAlert(massage: "заполните логин")
             return
         }
