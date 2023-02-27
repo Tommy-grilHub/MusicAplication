@@ -8,8 +8,19 @@
 
 import UIKit
 import Firebase
+import SnapKit
 
 class AuthViewController: UIViewController {
+    
+    //var tabBarView: TabBarViewController?
+    var titleLabel = UILabel()
+    var loginField = UITextField()
+    var emailField = UITextField()
+    var passwordField = UITextField()
+    var enterButton = UIButton()
+    var singButton = UIButton()
+    
+    var UID = String()
     
     var singUp: Bool = true {
         willSet{
@@ -32,23 +43,6 @@ class AuthViewController: UIViewController {
     
     var blurEffectView = UIVisualEffectView()
     
-
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var loginField: UITextField!
-    @IBOutlet var emailField: UITextField!
-    @IBOutlet var passwordField: UITextField!
-    @IBOutlet var enterButton: UIButton!
-    @IBOutlet var singButton: UIButton!
-    
-    @IBAction func switchButton(_ sender: UIButton) {
-        switchButtonAction()
-        enterButton.isEnabled = true
-    }
-    
-    @IBAction func switchSingUpIn(_ sender: UIButton) {
-        singUp = !singUp
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,13 +50,94 @@ class AuthViewController: UIViewController {
         emailField.delegate = self
         passwordField.delegate = self
         
-        singUp = false
+        test()
         
+        singUp = false
+        initInterface()
         configureBlurView()
         configureLoadingView()
         hideLoadingView()
     }
     
+    // MARK: func for Test 
+    
+    func test() {
+        emailField.text = "dima@m.ru"
+        passwordField.text = "123456"
+    }
+    
+    private func initInterface() {
+        view.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+
+        view.addSubview(titleLabel)
+        titleLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        titleLabel.font = UIFont.systemFont(ofSize: 25)
+        titleLabel.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
+            maker.top.equalToSuperview().inset(150)
+        }
+
+        view.addSubview(loginField)
+        loginField.layer.cornerRadius = 3
+        loginField.font = UIFont.systemFont(ofSize: 19)
+        loginField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        loginField.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        loginField.placeholder = "введите имя"
+        loginField.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        loginField.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
+            maker.left.right.equalToSuperview().inset(50)
+            maker.top.equalTo(titleLabel).inset(70)
+        }
+
+        view.addSubview(emailField)
+        emailField.layer.cornerRadius = 3
+        emailField.font = UIFont.systemFont(ofSize: 19)
+        emailField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        emailField.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        emailField.placeholder = "введите email"
+        emailField.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        emailField.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
+            maker.left.right.equalToSuperview().inset(50)
+            maker.top.equalTo(loginField).inset(35)
+        }
+        
+        view.addSubview(passwordField)
+        passwordField.layer.cornerRadius = 3
+        passwordField.font = UIFont.systemFont(ofSize: 19)
+        passwordField.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        passwordField.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        passwordField.placeholder = "введите пароль"
+        passwordField.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        passwordField.isSecureTextEntry = true
+        passwordField.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
+            maker.left.right.equalToSuperview().inset(50)
+            maker.top.equalTo(emailField).inset(35)
+        }
+        
+        view.addSubview(enterButton)
+        enterButton.layer.cornerRadius = 10
+        enterButton.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+        enterButton.backgroundColor = #colorLiteral(red: 0.5711960793, green: 0.8409035802, blue: 0.4088996053, alpha: 1)
+        enterButton.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
+            maker.left.right.equalToSuperview().inset(50)
+            maker.top.equalTo(passwordField).inset(70)
+            maker.bottom.equalToSuperview().inset(410)
+        }
+        enterButton.addTarget(self, action: #selector(onClickEnterButton), for: .touchUpInside)
+        
+        view.addSubview(singButton)
+        singButton.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+        singButton.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
+            maker.left.right.equalToSuperview().inset(50)
+            maker.bottom.equalToSuperview().inset(80)
+        }
+        singButton.addTarget(self, action: #selector(onClickSingButton), for: .touchUpInside)
+    }
     
     
     // MARK: LOGIC
@@ -82,6 +157,9 @@ class AuthViewController: UIViewController {
             }
             
             print("token: \(user.uid)")
+            
+            // open uid in xano
+            self.UID = user.uid
             self.openRootView()
         }
     }
@@ -101,6 +179,9 @@ class AuthViewController: UIViewController {
             }
             
             print("token: \(user.uid)")
+            
+            // add uid in xano
+            self.UID = user.uid
             self.openRootView()
         }
     }
@@ -172,13 +253,15 @@ class AuthViewController: UIViewController {
     }
     
     func openRootView() {
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let view = storyBoard.instantiateViewController(withIdentifier: "TabView") as! TabBarViewController
+        //view.UID = UID
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let view = storyBoard.instantiateViewController(withIdentifier: "TabView") as! TabViewController
-        
-        let NavController = UINavigationController(rootViewController: view)
-        NavController.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(view, animated: true)
+        let tabBarView = TabBarViewController()
+        //let navController = UINavigationController(rootViewController: tabBarView)
+        //navController.modalPresentationStyle = .fullScreen
+        tabBarView.getData(data: UID)
+        self.navigationController?.pushViewController(tabBarView, animated: true)
     }
     
     // MARK: Actions
@@ -186,6 +269,16 @@ class AuthViewController: UIViewController {
     func switchButtonAction() {
         checkFieldsAndMakeLoginLogic()
     }
+    
+    @objc func onClickEnterButton() {
+        switchButtonAction()
+        enterButton.isEnabled = true
+    }
+    
+    @objc func onClickSingButton() {
+        singUp = !singUp
+    }
+    
 }
 
 extension AuthViewController: UITextFieldDelegate {

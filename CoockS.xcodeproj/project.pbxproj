@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E341D1528A01B3600ABA016 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E341D1428A01B3600ABA016 /* TabViewController.swift */; };
+		4E081BB529542D4300F31048 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E081BB429542D4300F31048 /* CustomCollectionView.swift */; };
+		4E10714128CCC13F000D4590 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10714028CCC13F000D4590 /* TabBarViewController.swift */; };
+		4E10714728CCC3F0000D4590 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10714628CCC3F0000D4590 /* CustomCell.swift */; };
+		4E10714928CCCA72000D4590 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10714828CCCA72000D4590 /* model.swift */; };
+		4E37AFE6294287AF00A512F2 /* UIViewPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E37AFE5294287AF00A512F2 /* UIViewPin.swift */; };
+		4E449D0729388951003C7F99 /* MainMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E449D0529388951003C7F99 /* MainMusicController.swift */; };
+		4E449D0829388951003C7F99 /* MainMusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E449D0629388951003C7F99 /* MainMusicPresenter.swift */; };
 		4E648A9A289C01AE00F70193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E648A99289C01AE00F70193 /* AppDelegate.swift */; };
 		4E648A9C289C01AE00F70193 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E648A9B289C01AE00F70193 /* SceneDelegate.swift */; };
 		4E648A9E289C01AE00F70193 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E648A9D289C01AE00F70193 /* ViewController.swift */; };
 		4E648AA3289C01B000F70193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E648AA2289C01B000F70193 /* Assets.xcassets */; };
 		4E648AA6289C01B000F70193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E648AA4289C01B000F70193 /* LaunchScreen.storyboard */; };
 		4E648AAE289C01FC00F70193 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E648AAD289C01FC00F70193 /* GoogleService-Info.plist */; };
-		4E648AB0289C048300F70193 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E648AAF289C048300F70193 /* Main.storyboard */; };
 		4E648AB2289C048A00F70193 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E648AB1289C048A00F70193 /* AuthViewController.swift */; };
-		4EDD8AB328C5071800DFFB2F /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 4EDD8AB228C5071800DFFB2F /* AFNetworking */; };
+		4E66F671294EFD95001E1172 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4E66F670294EFD95001E1172 /* SnapKit */; };
+		4E7AF2662931EF49003F1DA0 /* LoaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF2652931EF49003F1DA0 /* LoaderImageView.swift */; };
+		4E7E0963294528CD00D75F24 /* EnlargedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E0962294528CD00D75F24 /* EnlargedViewController.swift */; };
+		4EB2AB0228D4CD8100EB9D81 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2AB0028D4CD8100EB9D81 /* MyCustomCell.swift */; };
+		4EB2AB0328D4CD8100EB9D81 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB2AB0128D4CD8100EB9D81 /* MyCustomCell.xib */; };
+		4EEE11402936349F007BF8D7 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE113F2936349F007BF8D7 /* RequestData.swift */; };
 		D3E7E3CA7E595C646E643B86 /* Pods_CoockS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5890A0A414BD82440197854C /* Pods_CoockS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E341D1428A01B3600ABA016 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		4E081BB429542D4300F31048 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
+		4E10714028CCC13F000D4590 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4E10714628CCC3F0000D4590 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		4E10714828CCCA72000D4590 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		4E37AFE5294287AF00A512F2 /* UIViewPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPin.swift; sourceTree = "<group>"; };
+		4E449D0529388951003C7F99 /* MainMusicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMusicController.swift; sourceTree = "<group>"; };
+		4E449D0629388951003C7F99 /* MainMusicPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMusicPresenter.swift; sourceTree = "<group>"; };
 		4E648A96289C01AE00F70193 /* CoockS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoockS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E648A99289C01AE00F70193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E648A9B289C01AE00F70193 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,8 +46,12 @@
 		4E648AA5289C01B000F70193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E648AA7289C01B000F70193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E648AAD289C01FC00F70193 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4E648AAF289C048300F70193 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4E648AB1289C048A00F70193 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		4E7AF2652931EF49003F1DA0 /* LoaderImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderImageView.swift; sourceTree = "<group>"; };
+		4E7E0962294528CD00D75F24 /* EnlargedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedViewController.swift; sourceTree = "<group>"; };
+		4EB2AB0028D4CD8100EB9D81 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
+		4EB2AB0128D4CD8100EB9D81 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
+		4EEE113F2936349F007BF8D7 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		5890A0A414BD82440197854C /* Pods_CoockS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoockS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB7869A152365D7F9B2A84B /* Pods-CoockS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoockS.release.xcconfig"; path = "Target Support Files/Pods-CoockS/Pods-CoockS.release.xcconfig"; sourceTree = "<group>"; };
 		F9B259F0728F2900C4995E73 /* Pods-CoockS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoockS.debug.xcconfig"; path = "Target Support Files/Pods-CoockS/Pods-CoockS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,7 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E7E3CA7E595C646E643B86 /* Pods_CoockS.framework in Frameworks */,
-				4EDD8AB328C5071800DFFB2F /* AFNetworking in Frameworks */,
+				4E66F671294EFD95001E1172 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,15 +111,57 @@
 				4E648A99289C01AE00F70193 /* AppDelegate.swift */,
 				4E648A9B289C01AE00F70193 /* SceneDelegate.swift */,
 				4E648A9D289C01AE00F70193 /* ViewController.swift */,
-				4E648AAF289C048300F70193 /* Main.storyboard */,
 				4E648AA2289C01B000F70193 /* Assets.xcassets */,
 				4E648AA4289C01B000F70193 /* LaunchScreen.storyboard */,
-				4E341D1428A01B3600ABA016 /* TabViewController.swift */,
 				4E648AB1289C048A00F70193 /* AuthViewController.swift */,
 				4E648AA7289C01B000F70193 /* Info.plist */,
 				4E648AAD289C01FC00F70193 /* GoogleService-Info.plist */,
+				4E10714028CCC13F000D4590 /* TabBarViewController.swift */,
+				4E37AFE5294287AF00A512F2 /* UIViewPin.swift */,
+				4E449D0529388951003C7F99 /* MainMusicController.swift */,
+				4E449D0629388951003C7F99 /* MainMusicPresenter.swift */,
+				4EEE113F2936349F007BF8D7 /* RequestData.swift */,
+				4E10714828CCCA72000D4590 /* model.swift */,
+				4E10714628CCC3F0000D4590 /* CustomCell.swift */,
+				4E7AF2652931EF49003F1DA0 /* LoaderImageView.swift */,
+				4E7E0962294528CD00D75F24 /* EnlargedViewController.swift */,
+				4E081BB429542D4300F31048 /* CustomCollectionView.swift */,
+				4EE73A0F293B62DF0040F1B4 /* MainModule */,
+				4EE73A10293B63050040F1B4 /* Model */,
+				4EB2AB0028D4CD8100EB9D81 /* MyCustomCell.swift */,
+				4EB2AB0128D4CD8100EB9D81 /* MyCustomCell.xib */,
 			);
 			path = CoockS;
+			sourceTree = "<group>";
+		};
+		4EE73A0F293B62DF0040F1B4 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				4EE73A11293B63710040F1B4 /* MainView */,
+				4EE73A12293B63820040F1B4 /* Presenter */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		4EE73A10293B63050040F1B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EE73A11293B63710040F1B4 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		4EE73A12293B63820040F1B4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +183,7 @@
 			);
 			name = CoockS;
 			packageProductDependencies = (
-				4EDD8AB228C5071800DFFB2F /* AFNetworking */,
+				4E66F670294EFD95001E1172 /* SnapKit */,
 			);
 			productName = CoockS;
 			productReference = 4E648A96289C01AE00F70193 /* CoockS.app */;
@@ -152,7 +214,7 @@
 			);
 			mainGroup = 4E648A8D289C01AE00F70193;
 			packageReferences = (
-				4EDD8AB128C5071800DFFB2F /* XCRemoteSwiftPackageReference "AFNetworking" */,
+				4E66F66F294EFD95001E1172 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 4E648A97289C01AE00F70193 /* Products */;
 			projectDirPath = "";
@@ -171,7 +233,7 @@
 				4E648AA6289C01B000F70193 /* LaunchScreen.storyboard in Resources */,
 				4E648AAE289C01FC00F70193 /* GoogleService-Info.plist in Resources */,
 				4E648AA3289C01B000F70193 /* Assets.xcassets in Resources */,
-				4E648AB0289C048300F70193 /* Main.storyboard in Resources */,
+				4EB2AB0328D4CD8100EB9D81 /* MyCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,11 +286,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E7E0963294528CD00D75F24 /* EnlargedViewController.swift in Sources */,
+				4EB2AB0228D4CD8100EB9D81 /* MyCustomCell.swift in Sources */,
+				4E449D0729388951003C7F99 /* MainMusicController.swift in Sources */,
+				4EEE11402936349F007BF8D7 /* RequestData.swift in Sources */,
+				4E37AFE6294287AF00A512F2 /* UIViewPin.swift in Sources */,
+				4E081BB529542D4300F31048 /* CustomCollectionView.swift in Sources */,
+				4E7AF2662931EF49003F1DA0 /* LoaderImageView.swift in Sources */,
 				4E648AB2289C048A00F70193 /* AuthViewController.swift in Sources */,
 				4E648A9E289C01AE00F70193 /* ViewController.swift in Sources */,
 				4E648A9A289C01AE00F70193 /* AppDelegate.swift in Sources */,
-				4E341D1528A01B3600ABA016 /* TabViewController.swift in Sources */,
+				4E10714128CCC13F000D4590 /* TabBarViewController.swift in Sources */,
+				4E10714728CCC3F0000D4590 /* CustomCell.swift in Sources */,
+				4E449D0829388951003C7F99 /* MainMusicPresenter.swift in Sources */,
 				4E648A9C289C01AE00F70193 /* SceneDelegate.swift in Sources */,
+				4E10714928CCCA72000D4590 /* model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,21 +494,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4EDD8AB128C5071800DFFB2F /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+		4E66F66F294EFD95001E1172 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AFNetworking/AFNetworking.git";
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.1;
+				kind = versionRange;
+				maximumVersion = 5.6.0;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4EDD8AB228C5071800DFFB2F /* AFNetworking */ = {
+		4E66F670294EFD95001E1172 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4EDD8AB128C5071800DFFB2F /* XCRemoteSwiftPackageReference "AFNetworking" */;
-			productName = AFNetworking;
+			package = 4E66F66F294EFD95001E1172 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

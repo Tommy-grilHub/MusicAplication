@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SnapKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,20 +16,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         FirebaseApp.configure()
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user == nil {
                 self.showModalAuth()
             }
         }
+        
+        //requestDataManager()
+        
         return true
     }
     
+//    func requestDataManager() {
+//        let presenter = MainMusicPresenter()
+//        let mainMusicController = MainMusicController()
+//        mainMusicController.presenter = presenter
+//        presenter.view = mainMusicController
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//        window.rootViewController = mainMusicController
+//        window.makeKeyAndVisible()
+//        self.window = window
+//    }
+    
     func showModalAuth() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let newVc = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
-        self.window?.rootViewController?.present(newVc, animated: true, completion: nil)
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let newVc = UINavigationController(rootViewController: AuthViewController())
+        newVc.setNavigationBarHidden(true, animated: true)
+        window.rootViewController = newVc
+        window.makeKeyAndVisible()
+        self.window = window
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let newVc = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+//        self.window?.rootViewController?.present(newVc, animated: true, completion: nil)
     }
     
     // MARK: UISceneSession Lifecycle
